@@ -195,6 +195,7 @@ const ProductImages = props => {
 					}}
 				</Field>
 			</FormItem>
+			<small><strong>Lưu ý:</strong> Ảnh đại diện của sản phẩm sẽ lấy ảnh đầu tiên khi bạn đã cập nhật</small>
 		</AdaptableCard>
 	)
 }

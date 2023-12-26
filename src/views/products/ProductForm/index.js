@@ -9,6 +9,9 @@ import cloneDeep from 'lodash/cloneDeep'
 import DeleteProductButton from './DeleteProductButton'
 import { AiOutlineSave } from 'react-icons/ai'
 import * as Yup from 'yup'
+import { IoArrowBack } from "react-icons/io5";
+
+
 
 const { useUniqueId } = hooks
 
@@ -64,6 +67,7 @@ const ProductForm = forwardRef((props, ref) => {
 								<div className="md:flex items-center">
 									<Button
 										size="sm"
+										icon={<IoArrowBack />}
 										className="ltr:mr-3 rtl:ml-3"
 										onClick={() => onDiscard?.()}
 										type="button"

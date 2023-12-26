@@ -17,10 +17,11 @@ const ListItem = ({ data, cardBorder }) => {
 	const { order } = useSelector((state) => state.productList.state.query)
 	const {
 		id,
-		img,
+		imgList,
 		name,
 		code,
-		price
+		price,
+		img
 	} = data
 
 	const onEdit = () => {
@@ -50,7 +51,7 @@ const ListItem = ({ data, cardBorder }) => {
 			<div className="grid gap-x-4 grid-cols-12">
 				<div className="my-1 sm:my-0 col-span-12 sm:col-span-1 md:col-span-2 lg:col-span-2 md:flex md:items-center">
 					<div className="h-[100px] w-[100px] overflow-hidden">
-						<DoubleSidedImage style={imageStyled} src={img ?? "/img/others/upload.png"} darkModeSrc={img ?? "/img/others/upload-dark.png"} />
+						<DoubleSidedImage style={imageStyled} src={img && (imgList && imgList.length > 0 ? imgList[0]?.img : "/img/others/upload.png")} darkModeSrc={img && (imgList && imgList.length > 0 ? imgList[0]?.img : "/img/others/upload-dark.png")} />
 					</div>
 				</div>
 				<div className="my-1 sm:my-0 col-span-12 sm:col-span-2 md:col-span-2 lg:col-span-2 md:flex md:items-center">

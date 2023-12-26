@@ -17,7 +17,7 @@ const navigationConfig = [
 		key: 'addproduct',
 		path: '/products/add',
 		title: 'Thêm sản phẩm',
-		translateKey: 'nav.products',
+		translateKey: 'nav.addproduct',
 		icon: 'add',
 		type: NAV_ITEM_TYPE_ITEM,
 		authority: ['admin'],

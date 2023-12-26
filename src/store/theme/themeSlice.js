@@ -2,15 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 import { themeConfig } from 'configs/theme.config'
 import {
 	LAYOUT_TYPE_MODERN,
-	LAYOUT_TYPE_CLASSIC,
-	LAYOUT_TYPE_STACKED_SIDE,
 	NAV_MODE_TRANSPARENT,
-	NAV_MODE_LIGHT,
-	NAV_MODE_DARK,
 	NAV_MODE_THEMED,
-	MODE_DARK,
-	MODE_LIGHT,
-	LAYOUT_TYPE_DECKED
 } from 'constants/theme.constant'
 
 const initialNavMode = () => {
@@ -33,11 +26,6 @@ const initialState = {
 	layout: themeConfig.layout
 }
 
-const availableNavColorLayouts = [
-	LAYOUT_TYPE_CLASSIC,
-	LAYOUT_TYPE_STACKED_SIDE,
-	LAYOUT_TYPE_DECKED
-]
 
 export const themeSlice = createSlice({
 	name: 'theme',
@@ -47,34 +35,12 @@ export const themeSlice = createSlice({
 			state.direction = action.payload
 		},
 		setMode: (state, action) => {
-
-			const availableColorNav = availableNavColorLayouts.includes(state.layout.type)
-
-			if (availableColorNav && action.payload === MODE_DARK && state.navMode !== NAV_MODE_THEMED) {
-				state.navMode = NAV_MODE_DARK
-			}
-			if (availableColorNav && action.payload === MODE_LIGHT && state.navMode !== NAV_MODE_THEMED) {
-				state.navMode = NAV_MODE_LIGHT
-			}
 			state.mode = action.payload
-		},
-		setLang: (state, action) => {
-			state.locale = action.payload
 		},
 		setLayout: (state, action) => {
 			state.cardBordered = action.payload === LAYOUT_TYPE_MODERN
 			if (action.payload === LAYOUT_TYPE_MODERN) {
 				state.navMode = NAV_MODE_TRANSPARENT
-			}
-
-			const availableColorNav = availableNavColorLayouts.includes(action.payload)
-
-			if (availableColorNav && state.mode === MODE_LIGHT) {
-				state.navMode = NAV_MODE_LIGHT
-			}
-
-			if (availableColorNav && state.mode === MODE_DARK) {
-				state.navMode = NAV_MODE_DARK
 			}
 
 			state.layout = {
@@ -97,16 +63,6 @@ export const themeSlice = createSlice({
 			} else {
 				if (state.layout.type === LAYOUT_TYPE_MODERN) {
 					state.navMode = NAV_MODE_TRANSPARENT
-				}
-
-				const availableColorNav = availableNavColorLayouts.includes(state.layout.type)
-
-				if (availableColorNav && state.mode === MODE_LIGHT) {
-					state.navMode = NAV_MODE_LIGHT
-				}
-
-				if (availableColorNav && state.mode === MODE_DARK) {
-					state.navMode = NAV_MODE_DARK
 				}
 			}
 		},

@@ -14,12 +14,11 @@ const ProductTable = () => {
 	const { order } = useSelector((state) => state.productList.state.query)
 	const data = useSelector((state) => state.productList.data.dataProducts)
 
+	console.log(data)
 
 	useEffect(() => {
 		dispatch(getProductList({ order }))
 	}, [dispatch, order])
-
-
 
 	return (
 		<>

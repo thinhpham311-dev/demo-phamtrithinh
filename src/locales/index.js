@@ -20,7 +20,6 @@ i18n.use(initReactI18next).init({
 
 export const dateLocales = {
     vi: () => import('dayjs/locale/vi'),
-
 }
 
 export default i18n
