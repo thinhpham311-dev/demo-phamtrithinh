@@ -35,7 +35,7 @@ const ProductEdit = () => {
 	}
 
 	const handleDiscard = () => {
-		navigate('/products')
+		navigate('/list')
 	}
 
 	const handleDelete = async (setDialogOpen) => {
@@ -55,7 +55,7 @@ const ProductEdit = () => {
 				placement: 'top-center'
 			}
 		)
-		navigate('/products')
+		navigate('/list')
 	}
 
 	useEffect(() => {

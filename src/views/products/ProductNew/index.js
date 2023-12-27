@@ -26,13 +26,13 @@ const ProductNew = () => {
 					placement: 'top-center'
 				}
 			)
-			navigate('/products')
+			navigate('/list')
 		}
 
 	}
 
 	const handleDiscard = () => {
-		navigate('/products')
+		navigate('/list')
 	}
 
 	return (

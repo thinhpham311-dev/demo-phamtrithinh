@@ -25,7 +25,7 @@ const GridItem = ({ data }) => {
 	} = data
 
 	const onEdit = () => {
-		navigate(`/products/edit/${id}`)
+		navigate(`/edit/${id}`)
 	}
 
 
@@ -42,7 +42,7 @@ const GridItem = ({ data }) => {
 					placement: 'top-center'
 				}
 			)
-			navigate('/products')
+			navigate('/list')
 		}
 	}
 

@@ -25,7 +25,7 @@ const ListItem = ({ data, cardBorder }) => {
 	} = data
 
 	const onEdit = () => {
-		navigate(`/products/edit/${id}`)
+		navigate(`/edit/${id}`)
 	}
 
 	const onhandleDelete = async (setDialogOpen) => {
@@ -41,7 +41,7 @@ const ListItem = ({ data, cardBorder }) => {
 					placement: 'top-center'
 				}
 			)
-			navigate('/products')
+			navigate('/list')
 		}
 	}
 

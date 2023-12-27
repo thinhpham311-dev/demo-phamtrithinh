@@ -8,19 +8,19 @@ export const publicRoutes = [
 export const protectedRoutes = [
     {
         key: 'products',
-        path: '/products',
+        path: '/list',
         component: React.lazy(() => import('views/products/ProductList')),
         authority: [],
     },
     {
         key: 'addproduct',
-        path: '/products/add',
+        path: '/add',
         component: React.lazy(() => import('views/products/ProductNew')),
         authority: [],
     },
     {
         key: 'products',
-        path: '/products/edit/:productId',
+        path: '/edit/:productId',
         component: React.lazy(() => import('views/products/ProductEdit')),
         authority: [],
     },

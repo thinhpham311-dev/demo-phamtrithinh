@@ -5,7 +5,7 @@ import {
 const navigationConfig = [
 	{
 		key: 'products',
-		path: '/products',
+		path: '/list',
 		title: 'Danh sách sản phẩm',
 		translateKey: 'nav.products',
 		icon: 'phone',
@@ -15,7 +15,7 @@ const navigationConfig = [
 	},
 	{
 		key: 'addproduct',
-		path: '/products/add',
+		path: '/add',
 		title: 'Thêm sản phẩm',
 		translateKey: 'nav.addproduct',
 		icon: 'add',
